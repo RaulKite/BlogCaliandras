@@ -1,3 +1,4 @@
-Given /^I'm not logged$/ do
-
+Given /^there is a User$/ do
+  create(:user)
 end
+
