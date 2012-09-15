@@ -1,4 +1,6 @@
 BlogCaliandras::Application.routes.draw do
+  get "blog/index"
+
   devise_for :users
 
   get "home/index"
