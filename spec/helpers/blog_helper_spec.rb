@@ -11,5 +11,9 @@ require 'spec_helper'
 #   end
 # end
 describe BlogHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+#  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Blog Helper" do
+    it "do nothing" do
+    end
+  end
 end

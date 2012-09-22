@@ -5,7 +5,8 @@ describe Article do
   before(:each) do
     @article = Article.new(
       :title => "Test Article", 
-      :user => mock_model("User")
+      :user => mock_model("User"),
+      :content => "Test content"
       )
   end
 
@@ -23,5 +24,9 @@ describe Article do
     @article.should_not be_valid
   end
 
+  it "is not valid without content" do
+    @article.content = nil
+    @article.should_not be_valid
+  end
 
 end
