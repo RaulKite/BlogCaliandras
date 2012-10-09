@@ -8,6 +8,9 @@ def path_to(page_name)
     when /new article/i
       new_article_path
 
+    when /articles list/i
+      articles_path
+
     else 
       raise "Can't find mapping from \"#{page_name}\" to a path."
   end

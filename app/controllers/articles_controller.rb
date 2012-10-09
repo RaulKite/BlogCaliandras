@@ -3,6 +3,16 @@ class ArticlesController < ApplicationController
 
 before_filter :authenticate_user!
 
+  def index
+     @articles = Article.find(:all)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @articles }
+    end
+  end
+
+
   def new
      @article = Article.new
 
