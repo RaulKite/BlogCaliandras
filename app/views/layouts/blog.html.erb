@@ -33,6 +33,12 @@
   <section id="articles">
     <h1 class="title">Articles</h1>
     <blockquote> Soy la puta hostia pero esto es solo una puta prueba para ver como queda aqui una frase decentilla</blockquote>
+    <% if flash[:alert] %>
+    <p class="flash-error"><%= flash[:alert] %></p>
+  <% end %>
+  <% if flash[:notice] %>
+    <p class="flash-notice"><%= flash[:notice] %></p>
+  <% end %>
     <div class="row">
       <div class="twelve columns"> 
         <%= yield %>

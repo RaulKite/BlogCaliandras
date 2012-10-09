@@ -1,5 +1,20 @@
 BlogCaliandras::Application.routes.draw do
-  get "blog/index"
+
+  resources :articles do
+    member do
+      get "new"
+      post "create"
+    end
+  end
+
+
+ # get "articles/new"
+
+  resources :blog do
+    member do
+      get "index"
+    end
+  end
 
   devise_for :users
 

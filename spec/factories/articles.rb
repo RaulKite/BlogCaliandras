@@ -1,8 +1,10 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
   factory :article do
-    user_id 1
+    association :user, :factory => :user
     title "MyString"
+    content "MyContent"
   end
+
+
 end
